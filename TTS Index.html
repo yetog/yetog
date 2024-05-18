@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>Text To Speech in JavaScript | </title>
+  <link rel="stylesheet" href="TTS App.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="wrapper">
+    <header>Text To Speech</header>
+    <form action="#">
+      <div class="row">
+        <label>Enter Text</label>
+        <textarea id="textarea"></textarea>
+      </div>
+      <div class="row">
+        <label>Select Voice</label>
+        <div class="outer">
+          <select id="voiceList"></select>
+        </div>
+      </div>
+      <div class="row">
+        <button id="convertBtn">Convert To Speech</button>
+        <button id="downloadBtn" disabled>Download Speech</button>
+        <button id="resetBtn">Reset Text</button>  </div>
+      <a id="downloadLink" style="display: none;"></a>
+    </form>
+  </div>
+
+  <script src="TTS APP.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/file-saver@latest/dist/FileSaver.min.js"></script>
+</body>
+</html>

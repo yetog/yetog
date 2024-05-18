@@ -1,0 +1,150 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body styles */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #ad5252; /* Background color */
+}
+
+/* Adjust text selection behavior */
+::selection {
+  color: #fff;
+  background: #ad5252;
+}
+
+/* Styles for the main application wrapper */
+.wrapper {
+  width: 370px;
+  padding: 25px 30px;
+  border-radius: 7px;
+  background: #ecbfbf; /* Background color */
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05); /* Subtle shadow effect */
+}
+
+/* Styles for the header within the wrapper */
+.wrapper header {
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center; /* Center align the header text */
+}
+
+/* Styles for the form within the wrapper */
+.wrapper form {
+  margin: 35px 0 20px; /* Spacing around the form */
+}
+
+/* Styles for form rows */
+form .row {
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: column; /* Stack elements vertically */
+}
+
+/* Styles for form row labels */
+form .row label {
+  font-size: 18px;
+  margin-bottom: 5px; /* Spacing below label */
+}
+
+/* Special styling for the second form row label (optional) */
+form .row:nth-child(2) label {
+  font-size: 17px;
+}
+
+/*
+  Styles applied to text area, select element, and buttons within rows.
+  These share common properties like outline removal, full width/height, and rounded corners.
+*/
+form :where(textarea, select, button) {
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Styles for the text area element */
+form .row textarea {
+  resize: none; /* Disable text area resizing */
+  height: 110px;
+  font-size: 15px;
+  padding: 8px 10px;
+  border: 1px solid #999; /* Basic border for the text area */
+}
+
+/* Hide the scrollbar for the text area on Webkit browsers */
+form .row textarea::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Styles for the outer element within a form row (likely for the select element) */
+form .row .outer {
+  height: 47px;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center; /* Center elements horizontally within the outer element */
+  border: 1px solid #999;
+}
+
+/* Styles for the select element within a form row */
+form .row select {
+  font-size: 14px;
+  background: none; /* Transparent background for the select element */
+}
+
+/* Hide the scrollbar for the select element on Webkit browsers */
+form .row select::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Style the track (background) of the scrollbar */
+form .row select::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Style the thumb of the scrollbar */
+form .row select::-webkit-scrollbar-thumb {
+  background: #888; /* Thumb color */
+  border-radius: 8px;
+  border-right: 2px solid #ffffff; /* White border on the right side of the thumb */
+}
+
+/* Styles for buttons within the form */
+
+/* Form Button Styles */
+form button {
+  height: 52px; /* Sets the height of the button */
+  color: #fff; /* Sets text color to white */
+  font-size: 17px; /* Sets font size for button text */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  margin-top: 10px; /* Adds margin above the button */
+  background: #8d0404; /* Sets the button background color (dark red) */
+  transition: 0.3s ease; /* Enables a smooth color transition on hover */
+}
+
+/* Button Hover Style */
+form button:hover {
+  background: #bd8e48; /* Changes background color to a lighter red on hover */
+}
+
+/* Media Query for Smaller Screens (max-width 400px) */
+@media (max-width: 400px) {
+  .wrapper {
+    max-width: 345px; /* Sets a maximum width for the wrapper on smaller screens */
+    width: 100%; /* Ensures the wrapper takes up the full width on smaller screens */
+  }
+}
